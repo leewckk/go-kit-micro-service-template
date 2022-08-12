@@ -39,7 +39,7 @@ import (
 	http1 "github.com/go-kit/kit/transport/http"
 	http3 "github.com/leewckk/go-kit-micro-service/middlewares/transport/http"
 	http2 "github.com/leewckk/go-kit-micro-service/router/http"
-	version "micro-service-sample/endpoint/version"
+	version "github.com/leewckk/go-kit-micro-service-template/endpoint/version"
 	http "net/http"
 )
 

@@ -24,8 +24,8 @@ package http
 
 import (
 	"fmt"
-	"micro-service-sample/configure"
-	"micro-service-sample/transport/gin/version"
+	"github.com/leewckk/go-kit-micro-service-template/configure"
+	"github.com/leewckk/go-kit-micro-service-template/transport/gin/version"
 
 	"github.com/leewckk/go-kit-micro-service/middlewares/tracing/report"
 	transhttp "github.com/leewckk/go-kit-micro-service/middlewares/transport/http"

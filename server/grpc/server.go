@@ -23,8 +23,8 @@
 package grpc
 
 import (
-	"micro-service-sample/configure"
-	"micro-service-sample/transport/grpc/version"
+	"github.com/leewckk/go-kit-micro-service-template/configure"
+	"github.com/leewckk/go-kit-micro-service-template/transport/grpc/version"
 
 	kitgrpc "github.com/go-kit/kit/transport/grpc"
 	"github.com/leewckk/go-kit-micro-service/middlewares/tracing/report"

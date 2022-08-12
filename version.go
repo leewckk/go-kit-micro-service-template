@@ -25,7 +25,7 @@ package main
 
 import (
 	"fmt"
-	"micro-service-sample/version"
+	"github.com/leewckk/go-kit-micro-service-template/version"
 )
 
 var (

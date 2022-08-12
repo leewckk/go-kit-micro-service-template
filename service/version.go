@@ -24,8 +24,8 @@ package service
 
 import (
 	"context"
-	endpoint "micro-service-sample/endpoint/version"
-	"micro-service-sample/version"
+	endpoint "github.com/leewckk/go-kit-micro-service-template/endpoint/version"
+	"github.com/leewckk/go-kit-micro-service-template/version"
 )
 
 func init() {

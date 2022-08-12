@@ -24,10 +24,10 @@ package main
 
 import (
 	"fmt"
-	"micro-service-sample/configure"
-	"micro-service-sample/server/grpc"
-	"micro-service-sample/server/http"
-	_ "micro-service-sample/service"
+	"github.com/leewckk/go-kit-micro-service-template/configure"
+	"github.com/leewckk/go-kit-micro-service-template/server/grpc"
+	"github.com/leewckk/go-kit-micro-service-template/server/http"
+	_ "github.com/leewckk/go-kit-micro-service-template/service"
 )
 
 func main() {

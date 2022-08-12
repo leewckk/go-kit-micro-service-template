@@ -38,8 +38,8 @@ import (
 	fmt "fmt"
 	grpc "github.com/go-kit/kit/transport/grpc"
 	grpc1 "google.golang.org/grpc"
-	version1 "micro-service-sample/endpoint/version"
-	version "micro-service-sample/pb/golang/pkg/version"
+	version1 "github.com/leewckk/go-kit-micro-service-template/endpoint/version"
+	version "github.com/leewckk/go-kit-micro-service-template/pb/golang/pkg/version"
 	reflect "reflect"
 )
 
