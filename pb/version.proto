@@ -1,0 +1,42 @@
+syntax = "proto3";
+package version;
+option go_package="pb/golang/pkg/version;version";
+
+import "google/api/annotations.proto";
+
+message VersionRequest {
+}
+
+message VersionInfo {
+    string hash = 1 ;                       /// GIT HASH信息
+    string tag = 2;                         /// git TAG信息
+    string version = 3;                     /// 版本信息
+    string builderVersion = 4;              /// 编译器版本号
+    string uptime = 5;                      /// 启动时间
+    string runningTimes = 6;                /// 运行时间
+    string buildTime = 7;                   /// 编译时间
+    string hostName = 8;                    /// HOSTNAME    
+    string platform = 9;                    /// PLATFORM
+}
+
+message VersionResponse{
+    string hash = 1 ;                       /// GIT HASH信息
+    string tag = 2;                         /// git TAG信息
+    string version = 3;                     /// 版本信息
+    string builderVersion = 4;              /// 编译器版本号
+    string uptime = 5;                      /// 启动时间
+    string runningTimes = 6;                /// 运行时间
+    string buildTime = 7;                   /// 编译时间
+    string hostName = 8;                    /// HOSTNAME    
+    string platform = 9;                    /// PLATFORM
+}
+
+service VersionService {
+    rpc Get( VersionRequest ) returns (VersionResponse) {
+        option(google.api.http) = {
+            get : "/v1/version"
+        };
+    }
+}
+
+
