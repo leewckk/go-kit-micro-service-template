@@ -4,7 +4,7 @@ BUILD_TIME_DATE=`date "+%Y-%m-%d %H:%M:%S"`
 GO_VERSION=`go version`
 GIT_HASH=`git rev-parse HEAD`
 BIN_DIR=./
-BIN_NAME=micro-service
+BIN_NAME=gokit-service
 
 BUILD_NAME=${BIN_DIR}${BIN_NAME}
 GIT_TAG=`git describe --always --tag`
