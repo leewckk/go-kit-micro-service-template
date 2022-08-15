@@ -46,7 +46,7 @@ server:
 discovery :
   servicename : "micro-service"
   type : "consul"
-  host : "127.0.0.1
+  host : "127.0.0.1"
   port : 8500
   api : "127.0.0.1:8500"
 
