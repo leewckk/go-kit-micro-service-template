@@ -1,0 +1,20 @@
+project : micro-service
+
+server:
+  http:
+    port : 8888
+    health: "/actuator/info"
+  grpc :
+    address: "0.0.0.0:6666"
+    port : 6666
+
+discovery :
+  servicename : "micro-service"
+  type : "consul"
+  host : "127.0.0.1
+  port : 8500
+  api : "127.0.0.1:8500"
+
+tracing :
+  type : "zipkin"
+  reporter : "http://localhost:9411/api/v2/spans"
