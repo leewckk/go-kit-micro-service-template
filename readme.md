@@ -20,7 +20,58 @@ git clone https://github.com/leewckk/go-kit-micro-service-template.git
 
 #### step 3 定义proto文件
 
+[`protoc-gen-gokit-micro`](https://github.com/leewckk/protoc-gen-gokit-micro)，提供了[`google.api.http`](https://github.com/googleapis/googleapis/blob/master/google/api/http.proto)的支持，可以通过在`proto`中定义`option`来完成`http`相关参数以及`API`的定义。以下列举了一个简单查询版本信息的`proto`文件：
 
+````protobuf
+syntax = "proto3";
+package version;
+option go_package="pb/golang/pkg/version;version";
+
+import "google/api/annotations.proto";
+
+message VersionRequest {
+}
+
+message VersionInfo {
+    string hash = 1 ;                       /// GIT HASH信息
+    string tag = 2;                         /// git TAG信息
+    string version = 3;                     /// 版本信息
+    string builderVersion = 4;              /// 编译器版本号
+    string uptime = 5;                      /// 启动时间
+    string runningTimes = 6;                /// 运行时间
+    string buildTime = 7;                   /// 编译时间
+    string hostName = 8;                    /// HOSTNAME    
+    string platform = 9;                    /// PLATFORM
+}
+
+message VersionResponse{
+    string hash = 1 ;                       /// GIT HASH信息
+    string tag = 2;                         /// git TAG信息
+    string version = 3;                     /// 版本信息
+    string builderVersion = 4;              /// 编译器版本号
+    string uptime = 5;                      /// 启动时间
+    string runningTimes = 6;                /// 运行时间
+    string buildTime = 7;                   /// 编译时间
+    string hostName = 8;                    /// HOSTNAME    
+    string platform = 9;                    /// PLATFORM
+}
+
+service VersionService {
+    rpc Get( VersionRequest ) returns (VersionResponse) {
+        option(google.api.http) = {
+            get : "/v1/version"
+        };
+    }
+}
+````
+
+
+
+#### step 4 通过`auto-gen.sh`生成项目代码
+
+````she
+./auto-gen.sh
+````
 
 
 
